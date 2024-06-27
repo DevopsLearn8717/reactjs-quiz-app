@@ -1,8 +1,10 @@
 name: React.js CI
 
 on:
+  push:
+    branches: "master"
   pull_request:
-    branches: "main"
+    branches: "master"
 
 jobs:
   frontend-test:
@@ -265,4 +267,5 @@ jobs:
         with:
           file: kubernetes-manifest/
           args: --severity-threshold=high
-#
+
+          
